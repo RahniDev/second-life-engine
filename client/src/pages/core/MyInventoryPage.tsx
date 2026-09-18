@@ -17,7 +17,7 @@ const MyInventoryPage = () => {
         <div>
             <h1>My Inventory</h1>
             {items.map((item: Item) => (
-                <ItemCard key={item.id} item={item} />
+                <ItemCard key={item.id} {...item} />
             ))}
         </div>
     );

@@ -3,6 +3,7 @@ import AppLayout from "./layouts/AppLayout";
 import HomePage from "./pages/core/HomePage";
 import AddItemPage from "./pages/core/AddItemPage";
 import MyInventoryPage from "./pages/core/MyInventoryPage";
+import ItemDetailsPage from "./pages/core/ItemDetailsPage";
 
 export const router = createBrowserRouter([
   {
@@ -11,6 +12,9 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      { path: "/item/:id", 
+        element: <ItemDetailsPage /> 
       },
       {
         path: "/add-item",

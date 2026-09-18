@@ -11,3 +11,13 @@ export async function getItems(): Promise<Item[]> {
 
   return response.json();
 }
+
+export async function getItem(id: string): Promise<Item> {
+  const response = await fetch(`${API_URL}/items/${id}`);
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch item");
+  }
+
+  return response.json();
+}

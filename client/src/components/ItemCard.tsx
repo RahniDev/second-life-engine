@@ -1,10 +1,14 @@
+import { Link } from "react-router";
+import type { Item } from "../types/item";
 
-const ItemCard = ({ item }) => {
+const ItemCard = (item: Item) => {
     return (
-        <div>
-            <h3>{item.name}</h3>
-            <p>{item.material}</p>
-        </div>
+        <Link to={`/item/${item.id}`}>
+            <article>
+                <h2>{item.name}</h2>
+                <p>{item.material}</p>
+            </article>
+        </Link>
     );
 }
 
