@@ -21,3 +21,24 @@ export async function getItem(id: string): Promise<Item> {
 
   return response.json();
 }
+
+export async function createItem(formData: FormData): Promise<Item> {
+  const response = await fetch(`${API_URL}/items`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: formData.get("name"),
+      material: formData.get("material") || null,
+    })
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.errors?.[0]?.message ?? "Failed to create item");
+  }
+
+  return data;
+}
