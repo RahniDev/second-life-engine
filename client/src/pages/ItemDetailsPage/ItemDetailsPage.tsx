@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
+import "./ItemDetailsPage.scss";
 import { getItem } from "../../services/api";
 import type { Item } from "../../types/item";
 

@@ -1,6 +1,7 @@
 import { useActionState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import "./AddItemPage.scss";
 import { createItem } from "../../services/api";
 
 type FormState = {

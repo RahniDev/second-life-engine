@@ -1,5 +1,7 @@
 import { Link } from "react-router";
-import type { Item } from "../types/item";
+
+import "./ItemCard.scss";
+import type { Item } from "../../types/item";
 
 const ItemCard = (item: Item) => {
     return (

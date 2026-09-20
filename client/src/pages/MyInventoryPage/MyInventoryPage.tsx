@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import ItemCard from "../../components/ItemCard";
+
+import "./MyInventoryPage.scss";
+import ItemCard from "../../components/ItemCard/ItemCard";
 import type { Item } from "../../types/item";
 import { getItems } from "../../services/api";
 
